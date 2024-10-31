@@ -5,7 +5,8 @@
 1. Use node v20.9.0 (npm v10.1.0)
 1. `npm i`
 1. `npm start`
-1. Go to http://localhost:3000/formList and make sure you can see `<formID>submitmessage</formID>` in the list
+1. Go to http://localhost:3000/formList and make sure you can see `<formID>submitmessage</formID>` in the list.
+   This comes from [storage/forms/submitmessage.xml](storage/forms/submitmessage.xml), and you can add your own XForms in that directory as well.
 
 ## get enketo going
 
