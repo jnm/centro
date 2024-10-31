@@ -14,10 +14,13 @@
    docker run --rm -it --publish 6379:6379 --publish 6380:6379 redis
    ```
 1. Get the Yarn stuff sorted
-1. Start Enketo; no need for a `config.json`, but set this one thing to an empty string using an environment variable:
+1. Start Enketo; do not create `config.json`, but set this one thing to an empty string using an environment variable:
    ```
    ENKETO_LINKED_FORM_AND_DATA_SERVER_SERVER_URL= yarn workspace enketo-express start
    ```
+   You should see Enketo emit `No local config.json found. Will check environment variables instead.` when starting up.
+
+   ⚠️ These instructions assume you do not have a `config.json`. If you do, please remove it or modify manually (latter is an exercise for the reader).
 1. Make sure http://localhost:8005/ says "Enketo Smart Paper for KoBoCAT is running!"
 
 ## launch a test form
