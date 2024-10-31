@@ -47,11 +47,7 @@ router
         // Save as temporary files and pass the paths to the submission model?
         // Pass XML submission as string?
         // What would work the best under heavy load?
-        const xmlResp = `<OpenRosaResponse xmlns="http://openrosa.org/http/response">
-    <message># Hello!
-    This is a _custom_ response message that should be displayed in **Enketo**
-    </message>
-</OpenRosaResponse>`;
+        const xmlResp = '<OpenRosaResponse xmlns="http://openrosa.org/http/response"><message># Hello!\nThis is a _custom_ response message that should be displayed in **Enketo**.\n* here\n* is a\n* list\n## sub heading\n1. and a\n3. numbered one\n</message></OpenRosaResponse>';
         bb.on( 'close', () => {
             //return submission.set( xmlData, files)
             return Promise.resolve({ status: 201, xml: xmlResp })
